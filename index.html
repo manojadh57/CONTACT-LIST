@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Simple HTML Page</title>
+    <!-- Bootstrap CSS from CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        .Wrapper {
+            background-image: url(https://www.shutterstock.com/image-vector/contact-us-customer-support-hotline-600nw-2407847227.jpg);
+            background-size: cover;
+        }
+
+
+        .Wrapper .phone {
+            background-size: cover;
+            background-image: url(https://preview.redd.it/what-is-your-favorite-iphone-and-ios-default-wallpaper-v0-4s5ngbslqq4c1.jpg?width=1125&format=pjpg&auto=webp&s=56a742de7e08e1be0ead5f3699f82c3eff5ecfa7);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: #000;
+            height: 600px;
+            width: 300px;
+        }
+
+
+        .slider {
+            width: 100%;
+            opacity: 0.7;
+            transition: opacity 0.2s;
+            background: rgba(255, 255, 255, 0.5);
+
+        }
+
+        .slider:hover {
+            cursor: pointer;
+            opacity: 1;
+        }
+
+        .slider::-webkit-slider-thumb {
+            width: 30px;
+            height: 30px;
+            border-radius: 30px;
+            background: radial-gradient(rgb(168, 71, 168), rgb(209, 71, 71));
+        }
+
+        #label {
+            pointer-events: none;
+
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="Wrapper min-vh-100 d-flex align-items-center justify-content-center">
+        <div class="phone bg-dark border border-5 rounded-5 shadow-lg border-dark" style="height: 600px; width: 300px;">
+            <!-- top section -->
+            <div class="top d-flex justify-content-between p-3 text-white" style="padding : 10px; height : 50px;">
+                <div class="time" style="font-size: 16px;">12:00 AM</div>
+
+                <div class="bg-white w-25 rounded-pill" style="height: 1.4rem"></div>
+
+                <div class="icons">
+                    <i class="fas fa-wifi"></i>
+                    <i class="fas fa-battery-half"></i>
+                    <i class="fas fa-signal"></i>
+                </div>
+            </div>
+
+
+
+            <main class="homeScreen h-100 p-2 position-relative">
+                <div class="slider-container position-relative bg-white rounded-4 shadow-lg p-3" style="top: 400px">
+                    <input type="range" min="0" max="100" value="0" class="slider" id="myslider" />
+
+                    <label id="label" for="customRange1" class="slider position-absolute text-center w-100"
+                        style="left: 8px; top: 20px;">Slide to Unlock</label>
+                </div>
+            </main>
+
+            <!-- icon section -->
+            <main class="appscreen p-2 h-100" style="display: none;">
+                <div class="icon-container d-flex justify-content-center
+                ">
+                    <div class="d-flex flex-column">
+                        <i class="fas fa-phone-alt fs-1 text-danger bg-black p-2 rounded-4 text-center"></i>
+
+                        <span> Contact </span>
+
+                    </div>
+                </div>
+
+            </main>
+
+            <!-- contact section -->
+            <main class="contactListScreen" style="display: NONE;">
+                <!-- contact head-->
+                <div class="contactList-container">
+                    <h2 class="p-2 fw-bolder">Contact</h2>
+                </div>
+
+                <!-- search -->
+                <div class="header m1-2 p-2 position-relative">
+                    <i class="fas fa-search position-absolute m-3 text-secondary" style="right: 10px;">
+                    </i>
+                    <input type="text" class="form-control">
+                </div>
+
+                <!-- spinner -->
+                <div class="d-flex justify-content-center align-items-center vh-60">
+                    <div class="spinner-border text-primary" style="width: 5rem; height: 5rem;" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+
+                <!-- contact display -->
+
+                <div id="list " class="">
+                    <div CLASS="py-2">10 CONTACT FOUND!!!</div>
+
+
+                    <div class="accordion" id="accordionPanelsStayOpenExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                                    aria-controls="panelsStayOpen-collapseOne">
+                                    <div class="d-flex align-items-center gap-2 p-2">
+
+                                        <img src="https://randomuser.me/api/portraits/men/80.jpg" class="rounded-circle"
+                                            style="width: 50px; height: 50px;" />
+
+                                        <div class="d-flex flex-column">
+                                            <div class="fw-bold">MANOJ ADHIKARI</div>
+                                            <small>8882 Bollinger Rd</small>
+                                        </div>
+                                    </div>
+                                </button>
+
+                            </h2>
+                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                                <div class="accordion-body">
+                                    <div
+                                        class="d-flex flex-column align-items-center p-4 border rounded-4 shadow-lg bg-light">
+                                        <!-- Profile Image -->
+                                        <img src="https://randomuser.me/api/portraits/men/80.jpg" class="rounded-circle"
+                                            style="width: 150px; height: 150px;" />
+
+                                        <!-- Contact Info -->
+                                        <h5 class="fw-bold mt-3">MANOJ ADHIKARI</h5>
+                                        <p class="mb-1"><i class="fas fa-envelope"></i> manoj@gmail.com</p>
+                                        <p class="mb-1"><i class="fas fa-phone"></i> 052555252</p>
+                                        <p class="mb-0"><i class="fas fa-map-marker-alt"></i> 8882 Bollinger Rd</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+        </div>
+        </main>
+    </div>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js (optional but often needed for some Bootstrap components) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
